@@ -1,0 +1,11 @@
+Service\StartBot.class
+Threads\RecieveThread.class
+Commands\CountCommand.class
+Threads\SendThread.class
+Commands\DefaultCommand.class
+Commands\RandomCommand.class
+Service\DBManager.class
+Commands\StartCommand.class
+Commands\HelpCommand.class
+Service\Bot.class
+Service\VoiceMsg.class
