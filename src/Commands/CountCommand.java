@@ -10,7 +10,7 @@ public class CountCommand{
 	public static SendMessage handle(Message message) {
 		SendMessage answer = new SendMessage();
 		answer.setChatId(message.getChatId().toString());
-		answer.setText("Всего в базе голосовых сообщений: " + String.valueOf(DBManager.Count()));
+		answer.setText("Р’СЃРµРіРѕ РІ Р±Р°Р·Рµ РіРѕР»РѕСЃРѕРІС‹С… СЃРѕРѕР±С‰РµРЅРёР№: " + String.valueOf(DBManager.Count()));
         return answer;
 	}
 

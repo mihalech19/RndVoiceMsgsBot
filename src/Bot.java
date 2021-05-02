@@ -14,8 +14,8 @@ import Commands.*;
 
 public class Bot extends TelegramLongPollingBot {
 
-	String succesInsert = "Р’Р°С€Рµ РіРѕР»РѕСЃРѕРІРѕРµ РїРѕСЃР»Р°РЅРёРµ Р±С‹Р»Рѕ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅРѕ :)";
-	String failedInsert = "РЈРїСЃ, РЅРµ РїРѕР»СѓС‡РёР»РѕСЃСЊ СЃРѕС…СЂР°РЅРёС‚СЊ РІР°С€Рµ РіРѕР»РѕСЃРѕРІРѕРµ РїРѕСЃР»Р°РЅРёРµ. Р’РѕР·РјРѕР¶РЅРѕ РѕРЅРѕ СѓР¶Рµ РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ РІ Р±Р°Р·Рµ.";
+	String succesInsert = "Ваше голосовое послание было успешно сохранено :)";
+	String failedInsert = "Упс, не получилось сохранить ваше голосовое послание. Возможно оно уже присутствует в базе.";
 
 	public final LinkedBlockingQueue<Object> sendQueue = new LinkedBlockingQueue<>();
 	public final LinkedBlockingQueue<Update> receiveQueue = new LinkedBlockingQueue<>();
@@ -51,7 +51,7 @@ public class Bot extends TelegramLongPollingBot {
 			if (message.getText().equals("/random")) {
 				SendMessage sendmessage = new SendMessage();
 				sendmessage.setChatId(message.getChatId().toString());
-				sendmessage.setText("РС‰Сѓ РїРѕСЃР»Р°РЅРёРµ РґР»СЏ РІР°СЃ...");
+				sendmessage.setText("Ищу послание для вас...");
 				sendQueue.add(sendmessage);
 				sendQueue.add(RandomCommand.handle(message));
 				return;

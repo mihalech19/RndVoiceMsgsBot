@@ -8,7 +8,7 @@ public class DefaultCommand {
 	{
 		SendMessage answer = new SendMessage();
 		answer.setChatId(message.getChatId().toString());
-        answer.setText("Я вас не понимаю! Воспользуйтесь командой /help для инструктажа");	
+        answer.setText("РЇ РІР°СЃ РЅРµ РїРѕРЅРёРјР°СЋ! Р’РѕСЃРїРѕР»СЊР·СѓР№С‚РµСЃСЊ РєРѕРјР°РЅРґРѕР№ /help РґР»СЏ РёРЅСЃС‚СЂСѓРєС‚Р°Р¶Р°");	
         return answer;
 	}
 }
